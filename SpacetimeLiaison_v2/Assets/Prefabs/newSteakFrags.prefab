@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2143450124158156795}
   - component: {fileID: 3421736650421506906}
   - component: {fileID: 1367940559960153695}
-  - component: {fileID: 2682598297083565061}
   - component: {fileID: 1386607731071687298}
+  - component: {fileID: 4682341615633538860}
   m_Layer: 0
   m_Name: steakfrag1
   m_TagString: ForkInteract
@@ -98,20 +98,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2682598297083565061
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967090838524841218}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4433720755017684184, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &1386607731071687298
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -126,6 +112,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -4433720755017684184, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &4682341615633538860
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967090838524841218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006055345, y: 0.0028290956, z: 0.0022315779}
+  m_Center: {x: -0.00070932455, y: 0.00023430996, z: -0.0011100986}
 --- !u!1 &3510420118159062857
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,8 +137,8 @@ GameObject:
   - component: {fileID: 8697874804269191382}
   - component: {fileID: 8748071950449370468}
   - component: {fileID: 8244238362040611335}
-  - component: {fileID: 1824756533860524729}
   - component: {fileID: 8134356258296021415}
+  - component: {fileID: 1688142837401104092}
   m_Layer: 0
   m_Name: steakfrag6
   m_TagString: ForkInteract
@@ -224,20 +223,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1824756533860524729
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3510420118159062857}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 9154229859513640662, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &8134356258296021415
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -252,6 +237,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 9154229859513640662, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &1688142837401104092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3510420118159062857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0020647852, y: 0.005086397, z: 0.0022281248}
+  m_Center: {x: 0.0002482613, y: 0.0005841126, z: -0.0011114088}
 --- !u!1 &4092053831043059855
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +262,8 @@ GameObject:
   - component: {fileID: 3804188036861207422}
   - component: {fileID: 5693732505345068432}
   - component: {fileID: 4318358046951895398}
-  - component: {fileID: 7379243103775736856}
   - component: {fileID: 7224881288002848052}
+  - component: {fileID: 5954604506981961771}
   m_Layer: 0
   m_Name: steakfrag7
   m_TagString: ForkInteract
@@ -350,20 +348,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7379243103775736856
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092053831043059855}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -6599988632671061536, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &7224881288002848052
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -378,6 +362,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -6599988632671061536, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &5954604506981961771
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092053831043059855}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0029818662, y: 0.0064373114, z: 0.002228125}
+  m_Center: {x: -0.0001978735, y: -0.00001458625, z: -0.0011080054}
 --- !u!1 &4253319839441743639
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +387,8 @@ GameObject:
   - component: {fileID: 5028931705744059101}
   - component: {fileID: 6388424451801820885}
   - component: {fileID: 3173609452674788291}
-  - component: {fileID: 8861743160830903506}
   - component: {fileID: 1474897467354184168}
+  - component: {fileID: 2608971447488514165}
   m_Layer: 0
   m_Name: steakfrag3
   m_TagString: ForkInteract
@@ -476,20 +473,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8861743160830903506
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4253319839441743639}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 1800893208209764834, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &1474897467354184168
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -504,6 +487,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 1800893208209764834, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &2608971447488514165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253319839441743639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004173485, y: 0.0045921076, z: 0.0022370387}
+  m_Center: {x: -0.000054561096, y: -0.00079600996, z: -0.0010729007}
 --- !u!1 &5664529878055793132
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,8 +512,8 @@ GameObject:
   - component: {fileID: 853158486204519462}
   - component: {fileID: 8715923381679334078}
   - component: {fileID: 7994486068348681750}
-  - component: {fileID: 8843615423972813454}
   - component: {fileID: 2815588160386059312}
+  - component: {fileID: 3472546032622344109}
   m_Layer: 0
   m_Name: steakfrag5
   m_TagString: ForkInteract
@@ -602,20 +598,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8843615423972813454
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664529878055793132}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2416459773144523474, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &2815588160386059312
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -630,6 +612,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2416459773144523474, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &3472546032622344109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664529878055793132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006508519, y: 0.0022552866, z: 0.0022358724}
+  m_Center: {x: -0.00010619983, y: -0.000015190926, z: -0.0011136911}
 --- !u!1 &5755604242281454493
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,8 +681,8 @@ GameObject:
   - component: {fileID: 3687629968570950352}
   - component: {fileID: 2383616232465517894}
   - component: {fileID: 4523483120844166619}
-  - component: {fileID: 7674951414497495687}
   - component: {fileID: 4309342397127787764}
+  - component: {fileID: 3855597299087039941}
   m_Layer: 0
   m_Name: steakfrag4
   m_TagString: ForkInteract
@@ -772,20 +767,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7674951414497495687
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5762229477662802826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -1074693594873192759, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &4309342397127787764
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -800,6 +781,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -1074693594873192759, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &3855597299087039941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762229477662802826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0029238402, y: 0.0032583848, z: 0.0022370387}
+  m_Center: {x: 0.0000341778, y: -0.0010284699, z: -0.0011138038}
 --- !u!1 &6258152642206060889
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,8 +806,8 @@ GameObject:
   - component: {fileID: 4655295475993662404}
   - component: {fileID: 3509754310166394052}
   - component: {fileID: 6354183859408031765}
-  - component: {fileID: 8769485002073641202}
   - component: {fileID: 1954763322044201193}
+  - component: {fileID: 4712708302870945893}
   m_Layer: 0
   m_Name: steakfrag2
   m_TagString: ForkInteract
@@ -898,20 +892,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8769485002073641202
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6258152642206060889}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2059944672951509839, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &1954763322044201193
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -926,6 +906,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2059944672951509839, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &4712708302870945893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258152642206060889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0041368133, y: 0.0041247243, z: 0.0022331083}
+  m_Center: {x: -0.00066406175, y: -0.0010769598, z: -0.0010850638}
 --- !u!1 &7525220029095546127
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +931,8 @@ GameObject:
   - component: {fileID: 4025306313113375615}
   - component: {fileID: 1061717181030413770}
   - component: {fileID: 2309459035669942989}
-  - component: {fileID: 586544791690094966}
   - component: {fileID: 8323263399198778584}
+  - component: {fileID: 7039288380539386419}
   m_Layer: 0
   m_Name: steakfrag8
   m_TagString: ForkInteract
@@ -1024,20 +1017,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &586544791690094966
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525220029095546127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4795790634337128601, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
 --- !u!64 &8323263399198778584
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1052,6 +1031,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -4795790634337128601, guid: 2355a8fd0d62abe4a9f332c1ea55a6c9, type: 3}
+--- !u!65 &7039288380539386419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525220029095546127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0030278512, y: 0.0054899943, z: 0.0023501415}
+  m_Center: {x: -0.00025202532, y: 0.00056042, z: -0.0011427876}
 --- !u!1 &7951569097931093851
 GameObject:
   m_ObjectHideFlags: 0

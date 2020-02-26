@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class grabbyFork : MonoBehaviour
 {
-    bool isHolding;
+    public bool isHolding;
 	public bool chewing;
 	int chewTimer;
 	public GameObject indicator;
