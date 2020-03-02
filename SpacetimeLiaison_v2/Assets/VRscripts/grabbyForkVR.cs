@@ -18,23 +18,20 @@ public class grabbyForkVR : grabbyFork
         indicatorImage = indicator.GetComponent<Image>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-
         if (isDirty)
         {
             dirtyTimer++;
-
             if (dirtyTimer > dirtyMax)
             {
                 dirtyTimer = 0;
                 dirtyNoise++;
             }
         }
-
         //eating food
         //used to check if chewing was false
-        if (Input.GetMouseButtonDown(1) && camControl.atFace == true && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
+        if (Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") == 1 && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
         {
 
             chewMeter.value += biteAmount;
@@ -63,35 +60,12 @@ public class grabbyForkVR : grabbyFork
         }
 
         //drinking water
-        if (Input.GetMouseButtonDown(1) && chewing && camControl.atFace && camControl.holdingGlass && !isDrinking)
+        if (Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") == 1 && chewing && camControl.holdingGlass && !isDrinking)
         {
             Debug.Log("Drink");
             isDrinking = true;
             SipSound.Play();
         }
-
-        /*
-        if (chewing) {
-
-            if (!isDrinking)
-                chewTimer++;
-            else
-                chewTimer += 2;
-
-            if (chewTimer >= 150) {
-				indicatorImage.color = new Color (200, 255, 0);
-			}
-			if (chewTimer >= 300) {
-				indicatorImage.color = new Color (0, 255, 0);
-			}
-			if (chewTimer >= 450) {
-				indicator.SetActive (false);
-				chewing = false;
-                isDrinking = false;
-            }
-
-		} 
-        */
 
     }
 

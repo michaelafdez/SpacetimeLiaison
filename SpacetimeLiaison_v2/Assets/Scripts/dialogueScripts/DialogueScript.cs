@@ -308,7 +308,7 @@ public class DialogueScript : MonoBehaviour
 			new int[] { 6, 6, 6, 6});
 		
 		dialoguePath [66] = new Dialogue ("The Prince",
-			"You most definately did not.",
+			"You most definitely did not.",
 			new int[] { 67, 67, 67, 67});
 		
 		dialoguePath [67] = new Dialogue ("The Prince",
@@ -667,7 +667,7 @@ public class DialogueScript : MonoBehaviour
 
 			letterIndex = 1;
 			dialoguePath [112] = new Dialogue ("The Prince", 
-				"My, you're really ham fising that glass aren't you? Anyways...",
+				"My, you're really ham fising that glass aren't you? Anyway...",
 				new int[] { storedIndex, storedIndex, storedIndex, storedIndex });
 			DateDialogue.text = dialoguePath [112].dialogue [0].ToString ();
 			isPrinting = true;
@@ -681,7 +681,7 @@ public class DialogueScript : MonoBehaviour
 			timer = 3f;
 			letterIndex = 1;
 			dialoguePath [113] = new Dialogue ("The Prince", 
-				"You just can't properly drink can you?",
+				"You can't properly drink can you?",
 				new int[] { 114, 114, 114, 114 });
 			dialoguePath [114] = new Dialogue ("The Prince", 
 				"Why am I wasting my time on a tactless mongrel? I must go at once.",
@@ -704,7 +704,7 @@ public class DialogueScript : MonoBehaviour
 
 			letterIndex = 1;
 			dialoguePath [112] = new Dialogue ("The Prince", 
-				"Why don't you make use of your napkin? Anyways...",
+				"Why don't you make use of your napkin? Anyway...",
 
 				new int[] { storedIndex, storedIndex, storedIndex, storedIndex });
 			currIndex = 112;

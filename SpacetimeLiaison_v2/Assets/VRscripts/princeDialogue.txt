@@ -1,0 +1,73 @@
+The Prince
+Hello! Yes, it is I, Prince Horatio VIII of the Empire of Janicula.
+But you may call me… The Prince.
+-CHOICE-
+Well it’s usually my servants who announce my presence.
+They take so much delight in their fanfare, I suppose it’s rubbed off on me.
+I told them to leave me be, for I would be dining with one who is... unacustomed.
+But alas! They are likely hidden about, spying on my every move- against my wishes.
+-CHOICE-
+Well yes, I suppose they can be quite annoying, but they don’t know any better.
+They’re part of a…I believe the term would be “lesser” species.
+You see, they’re prisoners of war from the nation of Friendliness that my father had hypnotized and enslaved.
+So their ignorance really isn’t their fault.
+-CHOICE-
+Ah, I recognize that look in your face.
+You’re worried that the Friendly people are innocent and my father is committing these atrocities for no reason.
+If you think they are innocent, I can assure you that they are not.
+The Janicula empire has been at war with the Friendly people for generations.
+They dared to secede from our perfect nation!
+Can you imagine?!
+I’m glad you believe so. We work tirelessly in our quest for greatness.
+My father is so tied up that I have a hand in certain affairs.
+Anyway, I tire of speaking on political matters.
+What else would you like to talk about?
+-CHOICE-
+Oh, I would love to.
+On my leisure, I enjoy taking long horse rides through the plains.
+Occasionally, I enjoy visiting the royal dungeon and choosing which traitor will be next to be executed.
+Recently, I’ve also been learning to crochet. It’s very therapeutic.
+-CHOICE-
+You wouldn’t even begin to understand the amount of pressure I’m put through.
+Believe it or not, I long to live in a society where I can just sit down and eat dinner with a peasant like you.
+I know that, on the surface, I seem to obsessively indulge in formalities and overt egotism.
+And, internally, I also obsessively indulge in formalities and overt egotism.
+But eating with you has made me realize something important.
+Love can bloom between anyone, even a peasant and a handsome prince.
+That is, as long as both people can finish their meals by the end of a date. Otherwise, why bother?
+-CHOICE-
+It may seem pretentious to a prole such as yourself, but these formalities are necesarry.
+It's important for everyone to understand exactly how important I am.
+ESPECIALLY in comparison to how unimportant you are.
+-CHOICE-
+
+
+-STRIKE-:DRINK
+You can't properly drink can you?
+My, you're really ham fising that glass aren't you? Anyway...
+
+-STRIKE-:FACE
+Why don't you make use of your napkin? Anyway...
+
+-STRIKE-:FULL
+Im sorry- it distracts me when people think its acceptable to speak with their mouth full.
+
+-STRIKE-:SILENT
+Excuse me? Are you even listening to what I'm saying? I said...
+
+
+-END-:FULL
+You are a slob... I must go at Once.
+
+-END-:FOOD
+You're going to waste the food you ordered? If you get a box, your steak will dry out. Goodbye- do not call me.
+
+-END-:DRINK
+Why am I wasting my time on a tactless mongrel? I must go at once.
+
+-END-:FACE
+I really cannot stand the mess you've left on your face- I must go at once.
+
+
+-END-:WIN
+I've had a wonderful time, call me!

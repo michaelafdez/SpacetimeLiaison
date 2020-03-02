@@ -31,7 +31,6 @@ public class grabbyFork : MonoBehaviour
 	public static float dirtyTimer;
 
 	public static int dirtyNoise;
-    // Start is called before the first frame update
     void Start()
     {
         crumbValue = 0;
@@ -41,9 +40,8 @@ public class grabbyFork : MonoBehaviour
 		indicatorImage = indicator.GetComponent<Image>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-		
         if (isDirty)
         {
             dirtyTimer++;
@@ -51,7 +49,7 @@ public class grabbyFork : MonoBehaviour
             if (dirtyTimer > dirtyMax)
             {
                 cameraController.strikes++;
-                Debug.Log(cameraController.strikes);
+              //  Debug.Log(cameraController.strikes);
                 dirtyTimer = 0;
 				dirtyNoise++;
             }
