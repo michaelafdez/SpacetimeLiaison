@@ -4,13 +4,10 @@ using UnityEngine;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using UnityEngine.UI;
 
 public class textParser : MonoBehaviour
 {
 
-    public Text nameUI;
-    public Text bodyUI;
 
     struct DialogueLine
     {
@@ -35,12 +32,6 @@ public class textParser : MonoBehaviour
         lines = new List<DialogueLine>();
         LoadDialogue(file);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void LoadDialogue(string filename)

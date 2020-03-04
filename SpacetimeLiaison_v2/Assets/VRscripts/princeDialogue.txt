@@ -1,44 +1,43 @@
-The Prince
 Hello! Yes, it is I, Prince Horatio VIII of the Empire of Janicula.
 But you may call me… The Prince.
 -CHOICE-
-Well it’s usually my servants who announce my presence.
-They take so much delight in their fanfare, I suppose it’s rubbed off on me.
-I told them to leave me be, for I would be dining with one who is... unacustomed.
-But alas! They are likely hidden about, spying on my every move- against my wishes.
+The Prince:Well it’s usually my servants who announce my presence.
+The Prince:They take so much delight in their fanfare, I suppose it’s rubbed off on me.
+The Prince:I told them to leave me be, for I would be dining with one who is... unacustomed.
+The Prince:But alas! They are likely hidden about, spying on my every move- against my wishes.
 -CHOICE-
-Well yes, I suppose they can be quite annoying, but they don’t know any better.
-They’re part of a…I believe the term would be “lesser” species.
-You see, they’re prisoners of war from the nation of Friendliness that my father had hypnotized and enslaved.
-So their ignorance really isn’t their fault.
+The Prince:Well yes, I suppose they can be quite annoying, but they don’t know any better.
+The Prince:They’re part of a…I believe the term would be “lesser” species.
+The Prince:You see, they’re prisoners of war from the nation of Friendliness that my father had hypnotized and enslaved.
+The Prince:So their ignorance really isn’t their fault.
 -CHOICE-
-Ah, I recognize that look in your face.
-You’re worried that the Friendly people are innocent and my father is committing these atrocities for no reason.
-If you think they are innocent, I can assure you that they are not.
-The Janicula empire has been at war with the Friendly people for generations.
-They dared to secede from our perfect nation!
-Can you imagine?!
-I’m glad you believe so. We work tirelessly in our quest for greatness.
-My father is so tied up that I have a hand in certain affairs.
-Anyway, I tire of speaking on political matters.
-What else would you like to talk about?
+The Prince:Ah, I recognize that look in your face.
+The Prince:You’re worried that the Friendly people are innocent and my father is committing these atrocities for no reason.
+The Prince:If you think they are innocent, I can assure you that they are not.
+The Prince:The Janicula empire has been at war with the Friendly people for generations.
+The Prince:They dared to secede from our perfect nation!
+The Prince:Can you imagine?!
+The Prince:I’m glad you believe so. We work tirelessly in our quest for greatness.
+The Prince:My father is so tied up that I have a hand in certain affairs.
+The Prince:Anyway, I tire of speaking on political matters.
+The Prince:What else would you like to talk about?
 -CHOICE-
-Oh, I would love to.
-On my leisure, I enjoy taking long horse rides through the plains.
-Occasionally, I enjoy visiting the royal dungeon and choosing which traitor will be next to be executed.
-Recently, I’ve also been learning to crochet. It’s very therapeutic.
+The Prince:Oh, I would love to.
+The Prince:On my leisure, I enjoy taking long horse rides through the plains.
+The Prince:Occasionally, I enjoy visiting the royal dungeon and choosing which traitor will be next to be executed.
+The Prince:Recently, I’ve also been learning to crochet. It’s very therapeutic.
 -CHOICE-
-You wouldn’t even begin to understand the amount of pressure I’m put through.
-Believe it or not, I long to live in a society where I can just sit down and eat dinner with a peasant like you.
-I know that, on the surface, I seem to obsessively indulge in formalities and overt egotism.
-And, internally, I also obsessively indulge in formalities and overt egotism.
-But eating with you has made me realize something important.
-Love can bloom between anyone, even a peasant and a handsome prince.
-That is, as long as both people can finish their meals by the end of a date. Otherwise, why bother?
+The Prince:You wouldn’t even begin to understand the amount of pressure I’m put through.
+The Prince:Believe it or not, I long to live in a society where I can just sit down and eat dinner with a peasant like you.
+The Prince:I know that, on the surface, I seem to obsessively indulge in formalities and overt egotism.
+The Prince:And, internally, I also obsessively indulge in formalities and overt egotism.
+The Prince:But eating with you has made me realize something important.
+The Prince:Love can bloom between anyone, even a peasant and a handsome prince.
+The Prince:That is, as long as both people can finish their meals by the end of a date. Otherwise, why bother?
 -CHOICE-
-It may seem pretentious to a prole such as yourself, but these formalities are necesarry.
-It's important for everyone to understand exactly how important I am.
-ESPECIALLY in comparison to how unimportant you are.
+The Prince:It may seem pretentious to a prole such as yourself, but these formalities are necesarry.
+The Prince:It's important for everyone to understand exactly how important I am.
+The Prince:ESPECIALLY in comparison to how unimportant you are.
 -CHOICE-
 
 
