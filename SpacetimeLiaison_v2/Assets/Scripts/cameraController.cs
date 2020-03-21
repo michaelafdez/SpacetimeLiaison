@@ -17,7 +17,7 @@ public class cameraController : MonoBehaviour
 
     //keeps record of amount of rotation applied to camera
     private float xAxisClamp;
-    private float mouseX, mouseY;
+    public float mouseX, mouseY;
 
     //variables for alternate method
 
@@ -91,7 +91,7 @@ public class cameraController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
 
         if (pickUpPoint.transform.localPosition.z <= innerEdge)
@@ -105,12 +105,12 @@ public class cameraController : MonoBehaviour
             theReticle.color = new Color(0, 0, 0, 100);
         }
 
-
+        /*
         if (!isRotating)
             CameraRotation();
         else
             ObjectRotation();
-
+        */
         Debug.DrawRay(this.transform.position, this.transform.forward * rayDistance, Color.magenta);
 
         

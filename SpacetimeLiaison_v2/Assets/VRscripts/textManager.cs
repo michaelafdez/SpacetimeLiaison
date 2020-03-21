@@ -63,7 +63,7 @@ public class textManager : MonoBehaviour
         {
             //GameObject button = (GameObject)Instantiate(choiceBox);
             // Button b = button.GetComponent<Button>();
-            ChoiceButton cb = button.GetComponent<ChoiceButton>();
+            //ChoiceButton cb = button.GetComponent<ChoiceButton>();
 
         }
     }
