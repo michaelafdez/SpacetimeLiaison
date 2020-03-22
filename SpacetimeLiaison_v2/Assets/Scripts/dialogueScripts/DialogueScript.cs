@@ -694,7 +694,7 @@ public class DialogueScript : MonoBehaviour
             iconAnim.Play();
         }
 
-		Debug.Log (grabbyFork.dirtyNoise);
+		//Debug.Log (grabbyFork.dirtyNoise);
 		//Dirty Listener
 		if (grabbyFork.dirtyNoise == 2 && thinIceDirty == false) { 
 			timer = 3f;

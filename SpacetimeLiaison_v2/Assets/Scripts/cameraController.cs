@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class cameraController : MonoBehaviour
 {
@@ -60,6 +61,13 @@ public class cameraController : MonoBehaviour
     public static int strikes;
 
     private bool isPaused;
+
+    public InputMaster controls;
+
+    private void Awake()
+    {
+        controls = new InputMaster();
+    }
 
     void Start()
     {
@@ -207,6 +215,16 @@ public class cameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        var gamepad = Gamepad.current;
+        if (gamepad == null)
+        {
+            return;
+        }
+
+       // if (gamepad.)
+
+
+
         /*
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, rayDistance, layerMask))
         {
