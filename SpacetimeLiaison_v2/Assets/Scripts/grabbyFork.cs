@@ -31,6 +31,8 @@ public class grabbyFork : MonoBehaviour
 	public static float dirtyTimer;
 
 	public static int dirtyNoise;
+
+    public handScript handScript;
     void Start()
     {
         crumbValue = 0;
@@ -57,7 +59,8 @@ public class grabbyFork : MonoBehaviour
 
         //eating food
         //used to check if chewing was false
-        if (Input.GetMouseButtonDown(1) && camControl.atFace == true && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
+        //if (Input.GetMouseButtonDown(1) && camControl.atFace == true && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
+        if (Input.GetMouseButtonDown(1) && handScript.atFace == true && isHolding == true && chewMeter.value < 0.9f && handScript.holdingFork)
         {
           
             chewMeter.value += biteAmount;

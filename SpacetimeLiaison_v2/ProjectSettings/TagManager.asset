@@ -13,6 +13,7 @@ TagManager:
   - CulterySoundTag
   - Floor
   - MiniFood
+  - Face
   layers:
   - Default
   - TransparentFX
