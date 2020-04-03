@@ -13,6 +13,7 @@ TagManager:
   - CulterySoundTag
   - Floor
   - MiniFood
+  - Face
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Interactable
   - 
   - 
   - 
