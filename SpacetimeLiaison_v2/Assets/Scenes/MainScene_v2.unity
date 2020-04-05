@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0039968286, g: 0.00021799677, b: 0.000000051559073,
+  m_IndirectSpecularColor: {r: 0.003996824, g: 0.00021799632, b: 0.000000051559073,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -18040,11 +18040,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841918928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94d55174fab3f584cab8e62dcc531db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDelta: {x: 0, y: 0}
+  sensitivity: 0
+  smoothing: 0
+  maxSpeed: 0
 --- !u!1 &1847179789
 GameObject:
   m_ObjectHideFlags: 0
@@ -21492,6 +21496,7 @@ GameObject:
   - component: {fileID: 7343509567315228173}
   - component: {fileID: 7343509567315228172}
   - component: {fileID: 7343509567315228175}
+  - component: {fileID: 7343509567315228176}
   m_Layer: 0
   m_Name: playerHand
   m_TagString: Untagged
@@ -21506,7 +21511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7343509567315228171}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f45151533e155c140b2e403e51f68777, type: 3}
   m_Name: 
@@ -21602,11 +21607,47 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4aa4fb57-5ff1-4d36-b8c7-ecc7dc2c2eda
     m_ActionName: Player/Rotate[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7d6f02fd-a7d7-4113-88c1-de79caf5fdab
+    m_ActionName: Player/Move[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f364760-1666-4f3e-bd2c-8b3cb46954fb
+    m_ActionName: Player/Choices
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0db692c0-1fa7-41ff-93d7-994d938653e3
+    m_ActionName: Player/Grab
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8986fd3e-6d46-4ae2-8149-f8f29e0547b7
+    m_ActionName: Player/Interact
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2194e941-1b12-4c03-99fd-752476bf56d4
+    m_ActionName: Player/Rotate
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Controller
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7343509567315228176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343509567315228171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d55174fab3f584cab8e62dcc531db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDelta: {x: 0, y: 0}
+  sensitivity: 0.2
+  smoothing: 6
+  maxSpeed: 15
 --- !u!33 &7461589313966607742
 MeshFilter:
   m_ObjectHideFlags: 0
