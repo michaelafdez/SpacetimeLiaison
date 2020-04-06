@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerActions : MonoBehaviour
+public class playerMovement : MonoBehaviour
 {
     InputMaster inputAction;
 
@@ -14,6 +14,8 @@ public class playerActions : MonoBehaviour
     public float sensitivity, smoothing, maxSpeed;
 
     private Rigidbody thisRigid;
+
+    public int lane = 2, vertLength;
 
     private void Awake()
     {
@@ -48,6 +50,20 @@ public class playerActions : MonoBehaviour
 
         //Debug.Log(thisRigid.velocity.magnitude);
     }
+
+    public void RaiseHand(InputAction.CallbackContext context)
+    {
+        /*
+        if (lane != 3)
+        {
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + vertLength, transform.position.z);
+
+            lane += 1;
+        }
+        */
+        Debug.Log("is pressed");
+    }
+
 
     private void OnEnable()
     {

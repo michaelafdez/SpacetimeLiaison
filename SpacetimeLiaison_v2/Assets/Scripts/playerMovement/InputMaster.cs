@@ -248,6 +248,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""VerticalMove"",
+                    ""type"": ""Button"",
+                    ""id"": ""a42a6d91-322c-4020-997a-0c5bbd633136"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -404,6 +412,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""491199c5-6b1c-4986-9ff5-c04eb6dd420c"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""VerticalMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -451,6 +470,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_VerticalMove = m_Player.FindAction("VerticalMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -570,6 +590,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_VerticalMove;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -579,6 +600,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @VerticalMove => m_Wrapper.m_Player_VerticalMove;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -603,6 +625,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @VerticalMove.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMove;
+                @VerticalMove.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMove;
+                @VerticalMove.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMove;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -622,6 +647,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
+                @VerticalMove.started += instance.OnVerticalMove;
+                @VerticalMove.performed += instance.OnVerticalMove;
+                @VerticalMove.canceled += instance.OnVerticalMove;
             }
         }
     }
@@ -659,5 +687,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnGrab(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnVerticalMove(InputAction.CallbackContext context);
     }
 }

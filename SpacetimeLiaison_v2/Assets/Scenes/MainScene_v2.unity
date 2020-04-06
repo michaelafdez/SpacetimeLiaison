@@ -18049,6 +18049,8 @@ MonoBehaviour:
   sensitivity: 0
   smoothing: 0
   maxSpeed: 0
+  lane: 2
+  vertLength: 0
 --- !u!1 &1847179789
 GameObject:
   m_ObjectHideFlags: 0
@@ -21627,6 +21629,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2194e941-1b12-4c03-99fd-752476bf56d4
     m_ActionName: Player/Rotate
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7343509567315228176}
+        m_MethodName: RaiseHand
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a42a6d91-322c-4020-997a-0c5bbd633136
+    m_ActionName: Player/Raise/Lower[/Keyboard/q,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
@@ -21645,9 +21662,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDelta: {x: 0, y: 0}
-  sensitivity: 0.2
+  sensitivity: 0.15
   smoothing: 6
-  maxSpeed: 15
+  maxSpeed: 6
+  lane: 2
+  vertLength: 2
 --- !u!33 &7461589313966607742
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -235,6 +235,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "VerticalMove",
+                    "type": "Button",
+                    "id": "a42a6d91-322c-4020-997a-0c5bbd633136",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -389,6 +397,17 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "491199c5-6b1c-4986-9ff5-c04eb6dd420c",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "VerticalMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
