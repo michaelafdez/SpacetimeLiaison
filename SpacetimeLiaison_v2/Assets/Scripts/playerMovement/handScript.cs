@@ -31,15 +31,30 @@ public class handScript : MonoBehaviour
 
     public Image theReticle;
 
+    public float vertSensitivity = 1;
+
+    private RigidbodyConstraints originalConstraints;
+
     // Start is called before the first frame update
     void Start()
     {
         thisRigid = gameObject.GetComponent<Rigidbody>();
+        originalConstraints = thisRigid.constraints;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown("escape"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            //SceneManager.LoadScene(0);
+        }
 
         mouseX = Input.GetAxis(mouseXInput);
         mouseY = Input.GetAxis(mouseYInput);
@@ -87,7 +102,7 @@ public class handScript : MonoBehaviour
                 holdingFork = false;
         }
 
-        if (transform.localPosition.z <= 1.75f)
+        if (transform.localPosition.z <= -6)
             atFace = true;
         else
         {
@@ -117,8 +132,30 @@ public class handScript : MonoBehaviour
         smoothMouse.x = Mathf.Lerp(smoothMouse.x, moveDelta.x, 1f / smoothing);
         smoothMouse.y = Mathf.Lerp(smoothMouse.y, moveDelta.y, 1f / smoothing);
 
+        //vertSensitivity = Mathf.Lerp()
+
         //thisRigid.velocity = new Vector3(moveDelta.x * sensitivity, thisRigid.velocity.y, moveDelta.y * sensitivity);
-        thisRigid.velocity = new Vector3(smoothMouse.x * sensitivity, thisRigid.velocity.y, smoothMouse.y * sensitivity);
+        thisRigid.velocity = new Vector3(smoothMouse.x * sensitivity, vertSensitivity, smoothMouse.y * sensitivity);
+
+        //Using global position is bad, change when you get the chance!!
+        if (Input.GetKey(KeyCode.Q))
+        {
+            vertSensitivity = 0.5f;
+
+            if (transform.position.y >= 2.4f)
+                thisRigid.constraints = originalConstraints;
+            else
+                thisRigid.constraints &= ~RigidbodyConstraints.FreezePositionY;
+
+        } else if (transform.position.y > 2.1f)
+        {
+            thisRigid.constraints &= ~RigidbodyConstraints.FreezePositionY;
+            vertSensitivity = -0.5f;
+        } else if (transform.position.y <= 2.1f)
+        {
+            thisRigid.constraints = originalConstraints;
+        }
+
     }
 
     void ObjectRotation()
