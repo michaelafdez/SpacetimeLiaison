@@ -35,6 +35,10 @@ public class handScript : MonoBehaviour
 
     private RigidbodyConstraints originalConstraints;
 
+    public GameObject[] waterDrops;
+    public float fastMouse;
+    public bool holdingGlass, hasWater;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,8 @@ public class handScript : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        hasWater = true;
     }
 
     // Update is called once per frame
@@ -100,6 +106,27 @@ public class handScript : MonoBehaviour
                 holdingFork = true;
             else
                 holdingFork = false;
+
+
+            //sends message to drop water if mouse is too fast
+            if (isHolding && hit.transform.CompareTag("Glass") && hasWater)
+            {
+                /*
+                if (mouseX > fastMouse || mouseY > fastMouse)
+                {
+                    foreach (GameObject drop in waterDrops)
+                    {
+                        drop.GetComponent<waterScript>().WaterJump();
+                    }
+                }
+                */
+                holdingGlass = true;
+
+            }
+            else
+            {
+                holdingGlass = false;
+            }
         }
 
         if (transform.localPosition.z <= -6)
@@ -114,6 +141,9 @@ public class handScript : MonoBehaviour
             ObjectRotation();
         else
             HandMovement();
+
+        if (!waterDrops[0].activeInHierarchy && !waterDrops[1].activeInHierarchy && !waterDrops[2].activeInHierarchy && !waterDrops[3].activeInHierarchy)
+            hasWater = false;
     }
 
     private void FixedUpdate()

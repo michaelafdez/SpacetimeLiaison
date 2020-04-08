@@ -10,6 +10,9 @@ public class napkinClean : MonoBehaviour
 
     public GameObject crumbFace;
     public bool withPoint;
+
+    public handScript handController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class napkinClean : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.transform.position == camControl.pickUpPoint.transform.position)
+        if (this.gameObject.transform.position == handController.pickUpPoint.transform.position)
         {
             withPoint = true;
         } else
@@ -27,7 +30,7 @@ public class napkinClean : MonoBehaviour
             withPoint = false;
         }
 
-        if (withPoint == true && camControl.atFace == true && Input.GetMouseButton(1))
+        if (withPoint == true && handController.atFace == true && Input.GetMouseButton(1))
         {
             forkScript.isDirty = false;
         }

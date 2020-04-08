@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class grabbyFork : MonoBehaviour
 {
     public bool isHolding;
-	public bool chewing;
-	int chewTimer;
-	public GameObject indicator;
-	public Image indicatorImage;
+    public bool chewing;
+    int chewTimer;
+    public GameObject indicator;
+    public Image indicatorImage;
 
     public GameObject dialogueManager;
 
@@ -17,9 +17,9 @@ public class grabbyFork : MonoBehaviour
 
     public cameraController camControl;
 
-   public bool isDirty;
-   public float crumbValue;
-   public float crumbMax;
+    public bool isDirty;
+    public float crumbValue;
+    public float crumbMax;
 
     public bool isDrinking = false;
 
@@ -28,16 +28,18 @@ public class grabbyFork : MonoBehaviour
     public Slider chewMeter;
     public float chewSpeed, biteAmount, dirtyMax;
 
-	public static float dirtyTimer;
+    public static float dirtyTimer;
 
-	public static int dirtyNoise;
+    public static int dirtyNoise;
+
+    public handScript handScript;
     void Start()
     {
         crumbValue = 0;
         crumbMax = 6;
-		chewing = false;
-		indicator.SetActive(false);
-		indicatorImage = indicator.GetComponent<Image>();
+        chewing = false;
+        indicator.SetActive(false);
+        indicatorImage = indicator.GetComponent<Image>();
     }
 
     void FixedUpdate()
@@ -49,17 +51,18 @@ public class grabbyFork : MonoBehaviour
             if (dirtyTimer > dirtyMax)
             {
                 cameraController.strikes++;
-              //  Debug.Log(cameraController.strikes);
+                //  Debug.Log(cameraController.strikes);
                 dirtyTimer = 0;
-				dirtyNoise++;
+                dirtyNoise++;
             }
         }
 
         //eating food
         //used to check if chewing was false
-        if (Input.GetMouseButtonDown(1) && camControl.atFace == true && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
+        //if (Input.GetMouseButtonDown(1) && camControl.atFace == true && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
+        if (Input.GetMouseButtonDown(1) && handScript.atFace == true && isHolding == true && chewMeter.value < 0.9f && handScript.holdingFork)
         {
-          
+
             chewMeter.value += biteAmount;
 
             if (!chewing)
@@ -86,7 +89,7 @@ public class grabbyFork : MonoBehaviour
         }
 
         //drinking water
-        if (Input.GetMouseButtonDown(1) && chewing && camControl.atFace && camControl.holdingGlass && !isDrinking)
+        if (Input.GetMouseButtonDown(1) && chewing && handScript.atFace && handScript.holdingGlass && !isDrinking)
         {
             Debug.Log("Drink");
             isDrinking = true;
@@ -115,7 +118,7 @@ public class grabbyFork : MonoBehaviour
 
 		} 
         */
-		
+
     }
 
     public IEnumerator ChewingFood()
@@ -135,10 +138,10 @@ public class grabbyFork : MonoBehaviour
 
     public void crumbsPlusPlus()
     {
-         if (crumbValue < crumbMax)
-          {
-             crumbValue += Random.Range(1.5f,3.0f);
-             if (crumbValue >= crumbMax)
+        if (crumbValue < crumbMax)
+        {
+            crumbValue += Random.Range(1.5f, 3.0f);
+            if (crumbValue >= crumbMax)
             {
                 isDirty = true;
                 crumbValue = 0;

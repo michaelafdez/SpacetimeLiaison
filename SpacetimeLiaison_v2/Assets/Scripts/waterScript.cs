@@ -19,7 +19,8 @@ public class waterScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Interactable") || other.gameObject.CompareTag("Water") || other.gameObject.CompareTag("Glass"))
+        if (other.gameObject.CompareTag("Interactable") || other.gameObject.CompareTag("Water") 
+            || other.gameObject.CompareTag("Glass") || other.gameObject.CompareTag("Player"))
         {
             //Debug.Log("Nothing");
         }
@@ -28,11 +29,12 @@ public class waterScript : MonoBehaviour
             if (!hasStruck)
             {
 				noise++;
-                cameraController.strikes++;
+                //cameraController.strikes++;
             //    Debug.Log(cameraController.strikes);
                 hasStruck = true;
             }
-            gameObject.SetActive(false);
+            if (hasStruck)
+                gameObject.SetActive(false);
         }
     }
 
@@ -52,5 +54,10 @@ public class waterScript : MonoBehaviour
         jumpForce = new Vector3(xzJump, yJump, xzJump);
 
         thisRigid.AddForce(jumpForce);
+    }
+
+    private void Update()
+    {
+        //Debug.Log(thisRigid.velocity);
     }
 }
