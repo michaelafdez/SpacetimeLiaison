@@ -10,13 +10,13 @@ public class pickerUpper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +30,7 @@ public class pickerUpper : MonoBehaviour
             other.transform.parent = this.transform;
             onObject = true;
         }
-        
+
     }
 
     public void Release()
@@ -41,9 +41,18 @@ public class pickerUpper : MonoBehaviour
             otherRigid.isKinematic = false;
             otherRigid.transform.parent = null;
 
-            onObject = false;
+            StartCoroutine("ObjectDropped");
         }
     }
 
+    //allows the held object to actually disconnect from player, but causes bug if player clicks too quickly
+    IEnumerator ObjectDropped()
+    {
+        for (int i = 0; i < 1f; i++)
+        {
+            yield return new WaitForSeconds(0.5f);
 
+        }
+        onObject = false;
+    }
 }
