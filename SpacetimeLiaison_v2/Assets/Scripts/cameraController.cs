@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class cameraController : MonoBehaviour
 {
 
+
     GameObject character;
     public GameObject pickUpPoint;
 
@@ -18,7 +19,7 @@ public class cameraController : MonoBehaviour
 
     //keeps record of amount of rotation applied to camera
     private float xAxisClamp;
-    public float mouseX, mouseY;
+    private float mouseX, mouseY;
 
     //variables for alternate method
 
@@ -62,13 +63,6 @@ public class cameraController : MonoBehaviour
 
     private bool isPaused;
 
-    public InputMaster controls;
-
-    private void Awake()
-    {
-        controls = new InputMaster();
-    }
-
     void Start()
     {
         character = this.transform.parent.gameObject;
@@ -90,7 +84,7 @@ public class cameraController : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        
+
         //Debug.Log(atFace);
         mouseX = Input.GetAxis(mouseXInput) * sensitivity * Time.deltaTime;
         mouseY = Input.GetAxis(mouseYInput) * sensitivity * Time.deltaTime;
@@ -102,10 +96,10 @@ public class cameraController : MonoBehaviour
             //SceneManager.LoadScene(0);
         }
 
-        if (pickUpPoint.transform.localPosition.z <= innerEdge)
+        if (isHolding && pickUpPoint.transform.localPosition.z <= innerEdge)
         {
             atFace = true;
-       
+
         }
         else
         {
@@ -113,15 +107,15 @@ public class cameraController : MonoBehaviour
             theReticle.color = new Color(0, 0, 0, 100);
         }
 
-        /*
+
         if (!isRotating)
             CameraRotation();
         else
             ObjectRotation();
-        */
+
         Debug.DrawRay(this.transform.position, this.transform.forward * rayDistance, Color.magenta);
 
-        
+
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, rayDistance, layerMask))
         {
             //boxCasting = Physics.BoxCast(pickUpPoint.transform.position, hit.collider.bounds.extents, this.transform.forward, out boxHit, pickUpPoint.transform.rotation, rayDistance);
@@ -131,7 +125,8 @@ public class cameraController : MonoBehaviour
             if (!atFace)
             {
                 theReticle.color = new Color(180, 170, 0, 100);
-            } else
+            }
+            else
             {
                 theReticle.color = new Color(0, 50, 220, 100);
             }
@@ -154,14 +149,17 @@ public class cameraController : MonoBehaviour
                 canScroll = true;
                 isHolding = true;
 
-            } else if (Input.GetMouseButtonDown(0) && isHolding == true)
+            }
+            else if (Input.GetMouseButtonDown(0) && isHolding == true)
             {
                 atFace = false;
                 pickerUpper.Release();
                 // StopCoroutine("NowHolding");
                 canScroll = false;
                 isHolding = false;
-                pickUpPoint.transform.localPosition = Vector3.forward;
+
+                pickUpPoint.transform.localPosition = Vector3.zero;
+
                 isRotating = false;
             }
 
@@ -177,7 +175,7 @@ public class cameraController : MonoBehaviour
                 holdingFork = true;
             else
                 holdingFork = false;
-         
+
             //sends message to drop water if mouse is too fast
             if (isHolding && hitTag == "Glass" && hasWater)
             {
@@ -190,11 +188,13 @@ public class cameraController : MonoBehaviour
                 }
                 holdingGlass = true;
 
-            } else
+            }
+            else
             {
                 holdingGlass = false;
             }
-        } else if (isHolding && mouseX < 0.01f && mouseY < 0.01f)
+        }
+        else if (isHolding && mouseX < 0.01f && mouseY < 0.01f)
         {
             //if statement checks mouse movement because camera sometimes moves faster than raycast
 
@@ -202,29 +202,21 @@ public class cameraController : MonoBehaviour
             pickerUpper.Release();
             canScroll = false;
             isHolding = false;
-            pickUpPoint.transform.localPosition = Vector3.forward;
             isRotating = false;
+
+            //teleports pickUpPoint to inside player
+            pickUpPoint.transform.localPosition = Vector3.zero;
         }
-        
 
-            if (!waterDrops[0].activeInHierarchy && !waterDrops[1].activeInHierarchy && !waterDrops[2].activeInHierarchy && !waterDrops[3].activeInHierarchy)
-                hasWater = false;
 
-        
+        if (!waterDrops[0].activeInHierarchy && !waterDrops[1].activeInHierarchy && !waterDrops[2].activeInHierarchy && !waterDrops[3].activeInHierarchy)
+            hasWater = false;
+
+
     }
 
     private void FixedUpdate()
     {
-        var gamepad = Gamepad.current;
-        if (gamepad == null)
-        {
-            return;
-        }
-
-       // if (gamepad.)
-
-
-
         /*
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, rayDistance, layerMask))
         {
@@ -311,40 +303,40 @@ public class cameraController : MonoBehaviour
     */
 
     void CameraRotation()
+    {
+
+        xAxisClamp += mouseY;
+
+        if (xAxisClamp > 90f)
         {
+            //clamps top rotation
+            xAxisClamp = 90f;
+            mouseY = 0f;
+            ClampXAxisRotation(270f);
+        }
+        else if (xAxisClamp < -90f)
+        {
+            //clamps bottom rotation
+            xAxisClamp = -90f;
+            mouseY = 0f;
+            ClampXAxisRotation(90f);
+        }
 
-            xAxisClamp += mouseY;
-
-            if (xAxisClamp > 90f)
-            {
-                //clamps top rotation
-                xAxisClamp = 90f;
-                mouseY = 0f;
-                ClampXAxisRotation(270f);
-            }
-            else if (xAxisClamp < -90f)
-            {
-                //clamps bottom rotation
-                xAxisClamp = -90f;
-                mouseY = 0f;
-                ClampXAxisRotation(90f);
-            }
-
-            transform.Rotate(Vector3.left * mouseY);
-            character.transform.Rotate(Vector3.up * mouseX);
+        transform.Rotate(Vector3.left * mouseY);
+        character.transform.Rotate(Vector3.up * mouseX);
 
     }
 
-        //stops camera from exceeding clamp
-        void ClampXAxisRotation(float value)
-        {
-            Vector3 eulerRotation = transform.eulerAngles;
-            eulerRotation.x = value;
-            transform.eulerAngles = eulerRotation;
-        }
-        
-        void ObjectRotation()
-        {
+    //stops camera from exceeding clamp
+    void ClampXAxisRotation(float value)
+    {
+        Vector3 eulerRotation = transform.eulerAngles;
+        eulerRotation.x = value;
+        transform.eulerAngles = eulerRotation;
+    }
+
+    void ObjectRotation()
+    {
         if (isHolding)
         {
             //hit.transform.Rotate(Vector3.up * mouseX);
@@ -353,47 +345,47 @@ public class cameraController : MonoBehaviour
             pickUpPoint.transform.Rotate(Vector3.right * mouseX);
 
         }
-            
-        }
-
-        
-
-      public void ScrollItem()
-        {
-            if (scrollDirection > 0f && pickUpPoint.transform.localPosition.z < outerEdge)
-            {
-                pickUpPos = pickUpPoint.transform.localPosition;
-                pickUpPos[2] += 0.1f;
-                pickUpPoint.transform.localPosition = pickUpPos;
-            }
-            else if (scrollDirection < 0f && pickUpPoint.transform.localPosition.z > innerEdge)
-            {
-                pickUpPos = pickUpPoint.transform.localPosition;
-                pickUpPos[2] -= 0.1f;
-                pickUpPoint.transform.localPosition = pickUpPos;
-            }
-
-
-        }
-
-        public void Release()
-        {
-            isHolding = false;
-            //if (hitTag == "Interactable")
-            //{
-            hit.rigidbody.useGravity = true;
-            hit.rigidbody.isKinematic = false;
-            hit.transform.parent = null;
-            //hit.rigidbody.AddRelativeForce(hit.rigidbody.velocity.normalized * Time.deltaTime * 4f);
-            //hit.rigidbody.AddForce(hit.rigidbody.velocity.normalized,)
-
-            //boxCasting = false;
-
-            pickUpMesh.enabled = false;
-            //}
-           
-
-        }
 
     }
+
+
+
+    public void ScrollItem()
+    {
+        if (scrollDirection > 0f && pickUpPoint.transform.localPosition.z < outerEdge)
+        {
+            pickUpPos = pickUpPoint.transform.localPosition;
+            pickUpPos[2] += 0.1f;
+            pickUpPoint.transform.localPosition = pickUpPos;
+        }
+        else if (scrollDirection < 0f && pickUpPoint.transform.localPosition.z > innerEdge)
+        {
+            pickUpPos = pickUpPoint.transform.localPosition;
+            pickUpPos[2] -= 0.1f;
+            pickUpPoint.transform.localPosition = pickUpPos;
+        }
+
+
+    }
+
+    public void Release()
+    {
+        isHolding = false;
+        //if (hitTag == "Interactable")
+        //{
+        hit.rigidbody.useGravity = true;
+        hit.rigidbody.isKinematic = false;
+        hit.transform.parent = null;
+        //hit.rigidbody.AddRelativeForce(hit.rigidbody.velocity.normalized * Time.deltaTime * 4f);
+        //hit.rigidbody.AddForce(hit.rigidbody.velocity.normalized,)
+
+        //boxCasting = false;
+
+        pickUpMesh.enabled = false;
+        //}
+
+
+    }
+
+}
 
