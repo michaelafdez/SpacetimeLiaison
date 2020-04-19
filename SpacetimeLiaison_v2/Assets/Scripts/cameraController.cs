@@ -63,6 +63,9 @@ public class cameraController : MonoBehaviour
 
     private bool isPaused;
 
+    public Slider mySlider;
+    public Fungus.Flowchart myFlowchart;
+
     void Start()
     {
         character = this.transform.parent.gameObject;
@@ -80,6 +83,9 @@ public class cameraController : MonoBehaviour
 
     void Update()
     {
+
+        mySlider.value = myFlowchart.GetIntegerVariable("Attractiveness");
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             SceneManager.LoadScene(1);

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/playerMovement/InputMaster.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Trash/playerMovement/InputMaster.inputactions'
 
 using System;
 using System.Collections;
