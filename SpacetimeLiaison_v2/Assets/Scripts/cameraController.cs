@@ -341,7 +341,7 @@ public class cameraController : MonoBehaviour
         {
             //hit.transform.Rotate(Vector3.up * mouseX);
             //hit.transform.Rotate(Vector3.left * mouseY);
-            pickUpPoint.transform.Rotate(Vector3.up * mouseY);
+            pickUpPoint.transform.Rotate(Vector3.down * mouseY);
             pickUpPoint.transform.Rotate(Vector3.right * mouseX);
 
         }

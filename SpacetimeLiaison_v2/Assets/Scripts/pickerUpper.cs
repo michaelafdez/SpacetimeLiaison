@@ -7,10 +7,12 @@ public class pickerUpper : MonoBehaviour
     public Rigidbody otherRigid;
     public bool onObject = false;
 
+    private FixedJoint theJoint;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        theJoint = gameObject.GetComponent<FixedJoint>();
     }
 
     // Update is called once per frame
@@ -26,8 +28,11 @@ public class pickerUpper : MonoBehaviour
             otherRigid = other.gameObject.GetComponent<Rigidbody>();
 
             otherRigid.useGravity = false;
-            otherRigid.isKinematic = true;
+            //otherRigid.isKinematic = true;
             other.transform.parent = this.transform;
+
+            theJoint.connectedBody = otherRigid;
+
             onObject = true;
         }
 
@@ -40,6 +45,8 @@ public class pickerUpper : MonoBehaviour
             otherRigid.useGravity = true;
             otherRigid.isKinematic = false;
             otherRigid.transform.parent = null;
+
+            theJoint.connectedBody = null;
 
             onObject = false;
         }

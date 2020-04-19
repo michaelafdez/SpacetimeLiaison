@@ -7,6 +7,9 @@ public class foodScript : MonoBehaviour
     public GameObject remains;
     public GameObject remains2;
     public GameObject remainsForMini;
+
+    private bool hasCut = false;
+    private float invincTime = 2f;
     
     void Start()
     {
@@ -30,12 +33,23 @@ public class foodScript : MonoBehaviour
             //    child.gameObject.AddComponent<forkRaycast>();
             //  }
             Destroy(other.gameObject);
+
+            StartCoroutine(InvincibleSteak());
         }
-        if (other.gameObject.tag == "MiniFood")
+        if (hasCut && other.gameObject.tag == "MiniFood")
         {
             Transform children = other.transform.root.GetComponentInChildren<Transform>();
             GameObject miniBoy = Instantiate(remainsForMini, other.transform.position, other.transform.rotation) as GameObject;
             Destroy(other.gameObject);
         }
+    }
+
+    private IEnumerator InvincibleSteak ()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            yield return new WaitForSeconds(invincTime);
+        }
+        hasCut = true;
     }
 }
