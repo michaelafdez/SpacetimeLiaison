@@ -537,7 +537,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -310.06763
-    y: 150.67043
+    y: 152.71124
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4307,7 +4307,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -384.60706
-    y: -164.77975
+    y: -159.76898
     width: 120
     height: 40
   tint: {r: 0.8207547, g: 0, b: 0, a: 1}
@@ -4318,8 +4318,9 @@ MonoBehaviour:
   eventHandler: {fileID: 18339357}
   commandList:
   - {fileID: 18339352}
-  - {fileID: 18339351}
   - {fileID: 18339354}
+  - {fileID: 18339351}
+  - {fileID: 18339360}
   suppressAllAutoSelections: 0
 --- !u!114 &18339350
 MonoBehaviour:
@@ -4411,7 +4412,7 @@ MonoBehaviour:
   waitForClick: 0
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 677804699}
 --- !u!114 &18339352
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4426,14 +4427,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 222
   indentLevel: 0
-  compareOperator: 0
+  compareOperator: 4
   variable: {fileID: 18339187}
   booleanData:
     booleanRef: {fileID: 0}
     booleanVal: 0
   integerData:
     integerRef: {fileID: 0}
-    integerVal: 3
+    integerVal: -5
   floatData:
     floatRef: {fileID: 0}
     floatVal: 0
@@ -4549,13 +4550,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 18339177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae67a23cb4aa74793b41258ae40bf321, type: 3}
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 226
+  itemId: 237
   indentLevel: 1
-  stopParentFlowchart: 1
-  targetFlowcharts: []
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 7156434749664002860}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: playerDead
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!114 &18339355
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4763,6 +4773,22 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &18339360
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18339177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae67a23cb4aa74793b41258ae40bf321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 236
+  indentLevel: 1
+  stopParentFlowchart: 1
+  targetFlowcharts: []
 --- !u!1 &28650334
 GameObject:
   m_ObjectHideFlags: 0
@@ -24179,7 +24205,7 @@ PrefabInstance:
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
@@ -24190,26 +24216,26 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 18339255}
+      objectReference: {fileID: 18339196}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 18339347}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
       propertyPath: scrollPos.x
-      value: -1154.5005
+      value: 1043.4135
       objectReference: {fileID: 0}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
       propertyPath: scrollPos.y
-      value: 95.869675
+      value: 100.66976
       objectReference: {fileID: 0}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
       propertyPath: zoom
-      value: 0.5800004
+      value: 0.49000046
       objectReference: {fileID: 0}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
@@ -25097,6 +25123,8 @@ GameObject:
   - component: {fileID: 2800557950533528974}
   - component: {fileID: 7156434749664002857}
   - component: {fileID: 7156434749664002858}
+  - component: {fileID: 7156434749664002860}
+  - component: {fileID: 7156434749664002859}
   m_Layer: 0
   m_Name: Prince
   m_TagString: Untagged
@@ -25133,6 +25161,41 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.051878575, y: 0.027974857, z: 0.08811208}
   m_Center: {x: -0.00037229367, y: -0.0014951428, z: 0.034056034}
+--- !u!111 &7156434749664002859
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156434749664002856}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &7156434749664002860
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156434749664002856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4ffb41478d4e0d4599f526175f1dda6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &7689193846893281691
 MeshFilter:
   m_ObjectHideFlags: 0
