@@ -32,6 +32,8 @@ public class grabbyFork : MonoBehaviour
 
     public static int dirtyNoise;
 
+    public GameObject dirtyImage;
+
     //public handScript handScript;
     void Start()
     {
@@ -46,7 +48,9 @@ public class grabbyFork : MonoBehaviour
     {
         if (isDirty)
         {
+
             dirtyTimer++;
+            dirtyImage.SetActive(true);
 
             if (dirtyTimer > dirtyMax)
             {
