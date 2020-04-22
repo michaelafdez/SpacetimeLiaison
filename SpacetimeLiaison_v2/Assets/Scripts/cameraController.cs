@@ -64,7 +64,14 @@ public class cameraController : MonoBehaviour
     private bool isPaused;
 
     public Slider mySlider;
-    public Fungus.Flowchart myFlowchart;
+    public Fungus.Flowchart myFlowchart, angryFlowchart;
+
+    string theCurrentLine;
+
+    public List<Fungus.Block> currentLine;
+
+    private bool isAngry = false;
+
 
     void Start()
     {
@@ -79,11 +86,18 @@ public class cameraController : MonoBehaviour
         pickUpMesh.enabled = false;
 
         hasWater = true;
+
+        theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
     }
 
     void Update()
     {
-
+        /*
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AngryDate();
+        }
+        */
         mySlider.value = myFlowchart.GetIntegerVariable("Attractiveness");
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -218,7 +232,47 @@ public class cameraController : MonoBehaviour
         if (!waterDrops[0].activeInHierarchy && !waterDrops[1].activeInHierarchy && !waterDrops[2].activeInHierarchy && !waterDrops[3].activeInHierarchy)
             hasWater = false;
 
+        if (waterScript.noise >= 2)
+        {
+            AngryDate();
+            waterScript.noise = 0;
+            Debug.Log("Dropped water");
+        }
 
+
+    }
+
+    private void AngryDate()
+    {
+        if (!isAngry)
+        {
+            isAngry = true;
+
+            currentLine = myFlowchart.GetExecutingBlocks();
+
+            //myFlowchart.stop
+
+            //theCurrentLine = myFlowchart.SelectedBlock.BlockName;
+
+            theCurrentLine = currentLine[0].BlockName;
+
+            myFlowchart.SetStringVariable("CurrentLine", theCurrentLine);
+
+            myFlowchart.StopBlock(theCurrentLine);
+
+            myFlowchart.ExecuteBlock("Oops");
+
+            Debug.Log(theCurrentLine);
+        }
+        
+    }
+
+    public void ResetDialogue()
+    {
+        myFlowchart.ExecuteBlock(theCurrentLine);
+
+        isAngry = false;
+        //Debug.Log("Reset");
     }
 
     private void FixedUpdate()

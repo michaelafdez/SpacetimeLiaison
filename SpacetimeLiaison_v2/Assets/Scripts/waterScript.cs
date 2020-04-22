@@ -30,7 +30,9 @@ public class waterScript : MonoBehaviour
             {
 				noise++;
                 //cameraController.strikes++;
-            //    Debug.Log(cameraController.strikes);
+                //    Debug.Log(cameraController.strikes);
+
+                Fungus.Flowchart.BroadcastFungusMessage("Do Thing");
                 hasStruck = true;
             }
             if (hasStruck)
