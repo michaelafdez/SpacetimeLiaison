@@ -72,6 +72,10 @@ public class cameraController : MonoBehaviour
 
     private bool isAngry = false;
 
+    public GameObject myEventSystem;
+    InputActionMap myInputMap;
+    public InputAction submitAction;
+ 
 
     void Start()
     {
@@ -87,7 +91,8 @@ public class cameraController : MonoBehaviour
 
         hasWater = true;
 
-        
+        myInputMap = myEventSystem.GetComponent<InputActionMap>(); 
+        submitAction = myInputMap.FindAction("Submit");
     }
 
     void FixedUpdate()
@@ -101,6 +106,11 @@ public class cameraController : MonoBehaviour
         }
         */
         mySlider.value = myFlowchart.GetIntegerVariable("Attractiveness");
+
+      if (myFlowchart.GetBooleanVariable("ChoiceTime") && grabbyFork.chewing && Input.GetKeyDown(KeyCode.Space))
+        {
+            myFlowchart.SetBooleanVariable("MouthFull", true);
+        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {

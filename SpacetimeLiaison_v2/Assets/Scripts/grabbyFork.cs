@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class grabbyFork : MonoBehaviour
 {
     public bool isHolding;
-    public bool chewing;
+    public static bool chewing;
     int chewTimer;
     public GameObject indicator;
     public Image indicatorImage;
