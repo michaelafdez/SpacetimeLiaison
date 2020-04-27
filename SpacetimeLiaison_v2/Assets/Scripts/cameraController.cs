@@ -87,11 +87,13 @@ public class cameraController : MonoBehaviour
 
         hasWater = true;
 
-        theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
+        
     }
 
-    void Update()
+    void FixedUpdate()
     {
+
+        theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
         /*
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -269,13 +271,15 @@ public class cameraController : MonoBehaviour
 
     public void ResetDialogue()
     {
+        //myFlowchart.ExecuteBlock(theCurrentLine);
+
         myFlowchart.ExecuteBlock(theCurrentLine);
 
         isAngry = false;
         //Debug.Log("Reset");
     }
 
-    private void FixedUpdate()
+   private void Update()
     {
         /*
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, rayDistance, layerMask))
