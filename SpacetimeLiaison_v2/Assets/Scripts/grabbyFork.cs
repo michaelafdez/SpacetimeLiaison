@@ -77,7 +77,7 @@ public class grabbyFork : MonoBehaviour
             {
                 StartCoroutine("ChewingFood");
                 chewing = true;
-               
+                myFlowchart.SetBooleanVariable("MouthFull",true);
             }
 
             isHolding = false;
@@ -142,6 +142,7 @@ public class grabbyFork : MonoBehaviour
             yield return null;
         }
         chewing = false;
+        myFlowchart.SetBooleanVariable("MouthFull", false);
         isDrinking = false;
     }
 
