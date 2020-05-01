@@ -89,7 +89,7 @@ public class cameraController : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
 
         theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
@@ -283,7 +283,7 @@ public class cameraController : MonoBehaviour
         //Debug.Log("Reset");
     }
 
-   private void Update()
+   private void FixedUpdate()
     {
         /*
         if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, rayDistance, layerMask))
