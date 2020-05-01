@@ -11,6 +11,8 @@ public class napkinClean : MonoBehaviour
     public GameObject crumbFace;
     public bool withPoint;
 
+    public Fungus.Flowchart myFlowchart;
+
     //public handScript handController;
 
     // Start is called before the first frame update
@@ -33,6 +35,7 @@ public class napkinClean : MonoBehaviour
         if (withPoint == true && camControl.atFace == true && Input.GetMouseButton(1))
         {
             forkScript.isDirty = false;
+           myFlowchart.SetBooleanVariable("DirtyFace", false);
         }
 
 

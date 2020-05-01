@@ -34,9 +34,12 @@ public class grabbyFork : MonoBehaviour
 
     public GameObject dirtyImage;
 
+    public Fungus.Flowchart myFlowchart;
+
     //public handScript handScript;
     void Start()
     {
+       
         crumbValue = 0;
         crumbMax = 6;
         chewing = false;
@@ -48,9 +51,10 @@ public class grabbyFork : MonoBehaviour
     {
         if (isDirty)
         {
-
+            myFlowchart.SetBooleanVariable("DirtyFace", true);
             dirtyTimer++;
             dirtyImage.SetActive(true);
+           
 
             if (dirtyTimer > dirtyMax)
             {
@@ -73,6 +77,7 @@ public class grabbyFork : MonoBehaviour
             {
                 StartCoroutine("ChewingFood");
                 chewing = true;
+               
             }
 
             isHolding = false;
