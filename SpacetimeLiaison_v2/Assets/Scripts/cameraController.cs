@@ -91,14 +91,23 @@ public class cameraController : MonoBehaviour
 
     void Update()
     {
+        /*
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            JumpToEnd();
+        }
+        */
 
-        theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
+        if (!isAngry)
+            theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
+
         /*
         if (Input.GetKeyDown(KeyCode.L))
         {
             AngryDate();
         }
         */
+
         mySlider.value = myFlowchart.GetIntegerVariable("Attractiveness");
 
      // if (myFlowchart.GetBooleanVariable("ChoiceTime") && grabbyFork.chewing && Input.GetKeyDown(KeyCode.Space))
@@ -119,7 +128,7 @@ public class cameraController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            //SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0);
         }
 
         if (isHolding && pickUpPoint.transform.localPosition.z <= innerEdge)
@@ -247,6 +256,15 @@ public class cameraController : MonoBehaviour
 
 
     }
+    
+    //for testing purposes only
+    private void JumpToEnd()
+    {
+        myFlowchart.StopAllBlocks();
+        myFlowchart.StopAllCoroutines();
+
+        myFlowchart.ExecuteBlock("Nice24");
+    }
 
     private void AngryDate()
     {
@@ -260,13 +278,34 @@ public class cameraController : MonoBehaviour
 
             //theCurrentLine = myFlowchart.SelectedBlock.BlockName;
 
-            theCurrentLine = currentLine[0].BlockName;
+            /*
+            if (currentLine[0].IsSelected)
+                theCurrentLine = currentLine[0].BlockName;
+            else 
+            */
 
-            myFlowchart.SetStringVariable("CurrentLine", theCurrentLine);
+            if (myFlowchart.GetBooleanVariable("ChoiceTime"))
+            {
 
-            myFlowchart.StopBlock(theCurrentLine);
+                Debug.Log("out of range :)");
+                //myFlowchart.SetStringVariable("CurrentLine", theCurrentLine);
+                theCurrentLine = myFlowchart.GetStringVariable("CurrentLine");
 
-            myFlowchart.ExecuteBlock("Oops");
+            } else
+            {
+                theCurrentLine = currentLine[0].BlockName;
+                myFlowchart.SetStringVariable("CurrentLine", theCurrentLine);
+
+                //myFlowchart.StopBlock(theCurrentLine);
+            }
+
+
+            //myFlowchart.StopBlock(theCurrentLine);
+
+            myFlowchart.StopAllBlocks();
+            myFlowchart.StopAllCoroutines();
+
+            myFlowchart.ExecuteBlock("Spilled");
 
             Debug.Log(theCurrentLine);
         }

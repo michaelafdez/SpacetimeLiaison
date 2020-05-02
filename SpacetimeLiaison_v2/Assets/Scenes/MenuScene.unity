@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -474,7 +475,8 @@ MonoBehaviour:
   m_Text: "LEFT MOUSE BUTTON over an object to pick it up. Press it again to release
     the object.\n\nSCROLL WHEEL while holding an object to bring it closer or farther
     away from you. \nNote: You can only take a bite or drink from something close
-    to your face.\n\nR and MOUSE to rotate held object.\n\nESC to return to main menu."
+    to your face.\n\nR and MOUSE to rotate held object.\n\nESC to return to main
+    menu."
 --- !u!222 &278894793
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -715,7 +717,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 522f9022d4b8cde458ba484fc8f9446a, type: 3}
-    m_FontSize: 19
+    m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -726,8 +728,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "RIGHT MOUSE BUTTON to use your held utensil (fork and water). \n\n1, 2,
-    3, or 4 to reply to the Prince."
+  m_Text: "RIGHT MOUSE BUTTON to use your held utensil (fork and water). \n\nWASD
+    to highlight a choice and Space to submit"
 --- !u!222 &377413536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1458,6 +1460,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733178670}
   m_CullTransparentMesh: 0
+--- !u!1 &745341987
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745341989}
+  - component: {fileID: 745341988}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &745341988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745341987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 0}
+--- !u!4 &745341989
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745341987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &807745139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1626,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2365,6 +2412,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2885,8 +2933,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553178332}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -3099,13 +3148,16 @@ MonoBehaviour:
   m_Text: '1. FORK - Pick up a piece, bring it close, and chomp.
 
 
-    2. KNIFE - Hit your meal to cut it up.
+    2. KNIFE -
+    Hit your meal to cut it up.
 
 
-    3. NAPKIN - When you get dirty, bring it close to clean yourself up.
+    3. NAPKIN - When you get dirty, bring it close
+    to clean yourself up.
 
 
-    4. WATER GLASS - Take a sip while chewing to chew faster. Careful not to spill!'
+    4. WATER GLASS - Take a sip while chewing to chew
+    faster. Careful not to spill!'
 --- !u!222 &1724481801
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class grabbyFork : MonoBehaviour
     public float crumbValue;
     public float crumbMax;
 
-    public bool isDrinking = false;
+    public bool isDrinking = false, hasEaten = false;
 
     public AudioSource SipSound, BiteSound;
 
@@ -65,6 +65,14 @@ public class grabbyFork : MonoBehaviour
             }
         }
 
+        /*
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            currentBits++;
+            Debug.Log(currentBits);
+        }
+        */
+
         //eating food
         //used to check if chewing was false
         //if (Input.GetMouseButtonDown(1) && camControl.atFace == true && isHolding == true && chewMeter.value < 0.9f && camControl.holdingFork)
@@ -92,8 +100,13 @@ public class grabbyFork : MonoBehaviour
 
             currentBits++;
 
-            if (currentBits >= bitsMax)
+            if (currentBits >= bitsMax && !hasEaten)
+            {
+                myFlowchart.SetBooleanVariable("HasEaten", true);
+                hasEaten = true;
                 Debug.Log("You Win");
+            }
+                
 
         }
 
