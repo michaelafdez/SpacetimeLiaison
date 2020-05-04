@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0039968286, g: 0.00021799677, b: 0.000000051559073,
+  m_IndirectSpecularColor: {r: 0.003996824, g: 0.00021799632, b: 0.000000051559073,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -846,8 +846,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 129.21637
-    y: -71.50686
+    x: 194.73363
+    y: -73.230965
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -942,8 +942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 137.20647
-    y: 218.72325
+    x: 174.9114
+    y: 236.75604
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -958,6 +958,7 @@ MonoBehaviour:
   - {fileID: 18339609}
   - {fileID: 18339611}
   - {fileID: 18339610}
+  - {fileID: 18339381}
   - {fileID: 18339332}
   suppressAllAutoSelections: 0
 --- !u!114 &18339213
@@ -4177,7 +4178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 201
   indentLevel: 0
-  storyText: They dared to secede from our perfect nation!!
+  storyText: If you think so highly of them, why don't you invite THEM out for dinner?
   description: 
   character: {fileID: 261393598}
   portrait: {fileID: 21300000, guid: c88567c766030f34793f1f4cf4cbea1e, type: 3}
@@ -4332,14 +4333,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1148.2307
-    y: -170.44168
-    width: 131.25
+    x: -1318.5016
+    y: -131.7521
+    width: 137.99997
     height: 40
-  tint: {r: 0.8207547, g: 0, b: 0, a: 1}
+  tint: {r: 0.8679245, g: 0.028657902, b: 0.04429426, a: 1}
   useCustomTint: 1
   itemId: 221
-  blockName: DeadUNUSED
+  blockName: deadUNUSED
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -5045,7 +5046,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1037.3656
     y: 24.666147
-    width: 143.75
+    width: 151.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5449,6 +5450,24 @@ MonoBehaviour:
   targetObject: {fileID: 963194225}
   methodName: ResetDialogue
   delay: 0
+--- !u!114 &18339381
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18339177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 585
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 3.5
+  durationOLD: 0
 --- !u!114 &18339382
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5838,6 +5857,33 @@ MonoBehaviour:
   parentBlock: {fileID: 1999696286878652163}
   suppressBlockAutoSelect: 0
   waitForFrames: 1
+--- !u!114 &18339396
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18339177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -1317.1825
+    y: -47.13669
+    width: 120
+    height: 40
+  tint: {r: 0.8679245, g: 0.028657902, b: 0.04429426, a: 1}
+  useCustomTint: 1
+  itemId: 592
+  blockName: OnUpdate
+  description: 
+  eventHandler: {fileID: 18339628}
+  commandList:
+  - {fileID: 18339627}
+  suppressAllAutoSelections: 1
 --- !u!114 &18339397
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5854,7 +5900,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -905.1523
     y: 88.570694
-    width: 143.75
+    width: 151.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6220,7 +6266,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -763.2341
     y: 13.22821
-    width: 122.50001
+    width: 131.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6776,9 +6822,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 143.72345
-    y: 90.824066
-    width: 123.75001
+    x: 128.09846
+    y: 83.011566
+    width: 131.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7080,7 +7126,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 244.72345
     y: 139.82407
-    width: 130
+    width: 139.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7585,7 +7631,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1955.6802
     y: 262.09164
-    width: 137.5
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7677,7 +7723,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3114.0938
     y: -218.16759
-    width: 137.5
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7849,7 +7895,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 954.5861
     y: -184.83345
-    width: 130
+    width: 137.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8151,7 +8197,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1137.3259
     y: -180.72389
-    width: 130
+    width: 139.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8453,7 +8499,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1038.9701
     y: -136.88828
-    width: 125.00001
+    width: 133.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8904,7 +8950,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3263.765
     y: -124.76096
-    width: 136.25
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9582,7 +9628,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1933.1494
     y: 87.40793
-    width: 136.25
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9884,7 +9930,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1946.8203
     y: -55.630104
-    width: 137.5
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10778,7 +10824,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2427.0142
     y: 383.67114
-    width: 131.25
+    width: 137.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10965,7 +11011,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 4138.6274
     y: 94.610306
-    width: 120
+    width: 123.99998
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11333,33 +11379,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1034.9438
     y: -231.79971
-    width: 182.50002
+    width: 193.99995
     height: 40
   tint: {r: 1, g: 0.4481132, b: 0.85251635, a: 1}
   useCustomTint: 1
   itemId: 491
   blockName: TESTATTRACTIVENESS
   description: 
-  eventHandler: {fileID: 18339547}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 18339545}
   suppressAllAutoSelections: 1
---- !u!114 &18339547
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18339177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000864f8e9e1748a39807861d0e60e29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 18339546}
-  suppressBlockAutoSelect: 0
-  keyPressType: 0
-  keyCode: 113
 --- !u!114 &18339548
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11397,7 +11427,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2437.0715
     y: 454.3246
-    width: 132.5
+    width: 139.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12099,7 +12129,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2425.68
     y: 275.88486
-    width: 120
+    width: 121.99998
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12529,7 +12559,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2603.9812
     y: -83.95694
-    width: 136.25
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12831,7 +12861,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2616.5894
     y: 259.52136
-    width: 120
+    width: 121.99998
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13271,7 +13301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 556
   indentLevel: 0
-  storyText: The Janicula Empire has been at war with the Friendly people for generations.
+  storyText: I'm sure you would have a lot in common.
   description: 
   character: {fileID: 261393598}
   portrait: {fileID: 21300000, guid: c88567c766030f34793f1f4cf4cbea1e, type: 3}
@@ -13298,10 +13328,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 557
   indentLevel: 0
-  storyText: If you think they are innocent, I can assure you that they are not.
+  storyText: Hmm, but perhaps you are right. It is truly difficult to blame them.
   description: 
   character: {fileID: 261393598}
-  portrait: {fileID: 21300000, guid: c88567c766030f34793f1f4cf4cbea1e, type: 3}
+  portrait: {fileID: 21300000, guid: ff65ef8b0837fde4dab305d98994dd23, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -13433,7 +13463,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 4615.135
     y: 86.63706
-    width: 120
+    width: 123.99998
     height: 40
   tint: {r: 0.49056602, g: 0.34292957, b: 0.04396581, a: 1}
   useCustomTint: 1
@@ -13661,6 +13691,46 @@ MonoBehaviour:
     stringVal: MenuScene
   loadingImage: {fileID: 0}
   sceneNameOLD: 
+--- !u!114 &18339627
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18339177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76641c2c16481448eb6c0c1184fcdebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 587
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 1772042872}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: PlayerAttractiveness
+  value:
+    integerRef: {fileID: 18339187}
+    integerVal: 0
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
+--- !u!114 &18339628
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18339177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fbef54b0b0adb41ab9b447a8f3cbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 18339396}
+  suppressBlockAutoSelect: 0
+  FireOn: 1
 --- !u!1 &28650334
 GameObject:
   m_ObjectHideFlags: 0
@@ -20091,7 +20161,7 @@ MonoBehaviour:
   pickUpPoint: {fileID: 562438952}
   mouseXInput: Mouse X
   mouseYInput: Mouse Y
-  sensitivity: 125
+  sensitivity: 150
   rayDistance: 6
   outerEdge: 2.1
   innerEdge: 0.75
@@ -33812,7 +33882,7 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 18339435}
+      objectReference: {fileID: 18339396}
     - target: {fileID: 1999696286894654063, guid: 6106afffb9fbdda4fa2d3eb323b6c90c,
         type: 3}
       propertyPath: selectedCommands.Array.data[0]
